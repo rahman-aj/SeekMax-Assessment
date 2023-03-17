@@ -8,20 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		11C7CD3729C465B400D4811A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7CD3629C465B400D4811A /* AppDelegate.swift */; };
-		11C7CD3B29C465B400D4811A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7CD3A29C465B400D4811A /* ViewController.swift */; };
+		11C7CD3B29C465B400D4811A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7CD3A29C465B400D4811A /* MainViewController.swift */; };
 		11C7CD3E29C465B400D4811A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11C7CD3C29C465B400D4811A /* Main.storyboard */; };
 		11C7CD4029C465B600D4811A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11C7CD3F29C465B600D4811A /* Assets.xcassets */; };
 		11C7CD4329C465B600D4811A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11C7CD4129C465B600D4811A /* LaunchScreen.storyboard */; };
+		11C7CD4E29C4698D00D4811A /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7CD4D29C4698D00D4811A /* AppCoordinator.swift */; };
+		11C7CD5029C469DB00D4811A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7CD4F29C469DB00D4811A /* MainViewModel.swift */; };
+		11C7CD5329C46A6100D4811A /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7CD5229C46A6100D4811A /* UIViewControllerExtension.swift */; };
+		11C7CD5529C46A9500D4811A /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7CD5429C46A9500D4811A /* UIViewExtension.swift */; };
+		11C7CD5929C46B4900D4811A /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 11C7CD5829C46B4900D4811A /* swiftgen.yml */; };
+		11C7CD5C29C46B6200D4811A /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7CD5B29C46B6200D4811A /* Storyboards.swift */; };
+		90391755297192624104D8F8 /* Pods_SeekMaxAssessment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0769655BF65227ED0995EEE7 /* Pods_SeekMaxAssessment.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0769655BF65227ED0995EEE7 /* Pods_SeekMaxAssessment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SeekMaxAssessment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11C7CD3329C465B400D4811A /* SeekMaxAssessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeekMaxAssessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11C7CD3629C465B400D4811A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		11C7CD3A29C465B400D4811A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		11C7CD3A29C465B400D4811A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		11C7CD3D29C465B400D4811A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		11C7CD3F29C465B600D4811A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11C7CD4229C465B600D4811A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11C7CD4429C465B600D4811A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11C7CD4D29C4698D00D4811A /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		11C7CD4F29C469DB00D4811A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		11C7CD5229C46A6100D4811A /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		11C7CD5429C46A9500D4811A /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		11C7CD5829C46B4900D4811A /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		11C7CD5B29C46B6200D4811A /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		5CA4A61A8B6FA91CEC000DA3 /* Pods-SeekMaxAssessment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeekMaxAssessment.debug.xcconfig"; path = "Target Support Files/Pods-SeekMaxAssessment/Pods-SeekMaxAssessment.debug.xcconfig"; sourceTree = "<group>"; };
+		AB36F8C2A56A140B43E6D6EB /* Pods-SeekMaxAssessment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeekMaxAssessment.release.xcconfig"; path = "Target Support Files/Pods-SeekMaxAssessment/Pods-SeekMaxAssessment.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90391755297192624104D8F8 /* Pods_SeekMaxAssessment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +57,8 @@
 			children = (
 				11C7CD3529C465B400D4811A /* SeekMaxAssessment */,
 				11C7CD3429C465B400D4811A /* Products */,
+				58ECDF408C1C0FBB0DEF01DE /* Pods */,
+				ACF0C910A262C2ADB55ECC0A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,7 +74,10 @@
 			isa = PBXGroup;
 			children = (
 				11C7CD4A29C465F600D4811A /* UI */,
+				11C7CD5129C46A4D00D4811A /* Utilities */,
+				11C7CD5A29C46B5700D4811A /* Generated */,
 				11C7CD4B29C4660700D4811A /* Resources */,
+				11C7CD5629C46B2900D4811A /* Tools Configuration */,
 			);
 			path = SeekMaxAssessment;
 			sourceTree = "<group>";
@@ -65,8 +87,8 @@
 			children = (
 				11C7CD3629C465B400D4811A /* AppDelegate.swift */,
 				11C7CD4129C465B600D4811A /* LaunchScreen.storyboard */,
-				11C7CD3C29C465B400D4811A /* Main.storyboard */,
-				11C7CD3A29C465B400D4811A /* ViewController.swift */,
+				11C7CD4D29C4698D00D4811A /* AppCoordinator.swift */,
+				11C7CD4C29C4694800D4811A /* Main */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -80,6 +102,66 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		11C7CD4C29C4694800D4811A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				11C7CD3C29C465B400D4811A /* Main.storyboard */,
+				11C7CD3A29C465B400D4811A /* MainViewController.swift */,
+				11C7CD4F29C469DB00D4811A /* MainViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		11C7CD5129C46A4D00D4811A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				11C7CD5229C46A6100D4811A /* UIViewControllerExtension.swift */,
+				11C7CD5429C46A9500D4811A /* UIViewExtension.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		11C7CD5629C46B2900D4811A /* Tools Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				11C7CD5729C46B3900D4811A /* SwiftGen */,
+			);
+			path = "Tools Configuration";
+			sourceTree = "<group>";
+		};
+		11C7CD5729C46B3900D4811A /* SwiftGen */ = {
+			isa = PBXGroup;
+			children = (
+				11C7CD5829C46B4900D4811A /* swiftgen.yml */,
+			);
+			path = SwiftGen;
+			sourceTree = "<group>";
+		};
+		11C7CD5A29C46B5700D4811A /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				11C7CD5B29C46B6200D4811A /* Storyboards.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		58ECDF408C1C0FBB0DEF01DE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5CA4A61A8B6FA91CEC000DA3 /* Pods-SeekMaxAssessment.debug.xcconfig */,
+				AB36F8C2A56A140B43E6D6EB /* Pods-SeekMaxAssessment.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		ACF0C910A262C2ADB55ECC0A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0769655BF65227ED0995EEE7 /* Pods_SeekMaxAssessment.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -87,6 +169,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11C7CD4729C465B600D4811A /* Build configuration list for PBXNativeTarget "SeekMaxAssessment" */;
 			buildPhases = (
+				A5379043142EFC4A4076CB18 /* [CP] Check Pods Manifest.lock */,
 				11C7CD2F29C465B400D4811A /* Sources */,
 				11C7CD3029C465B400D4811A /* Frameworks */,
 				11C7CD3129C465B400D4811A /* Resources */,
@@ -139,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11C7CD4329C465B600D4811A /* LaunchScreen.storyboard in Resources */,
+				11C7CD5929C46B4900D4811A /* swiftgen.yml in Resources */,
 				11C7CD4029C465B600D4811A /* Assets.xcassets in Resources */,
 				11C7CD3E29C465B400D4811A /* Main.storyboard in Resources */,
 			);
@@ -146,13 +230,43 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A5379043142EFC4A4076CB18 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SeekMaxAssessment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		11C7CD2F29C465B400D4811A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11C7CD3B29C465B400D4811A /* ViewController.swift in Sources */,
+				11C7CD5529C46A9500D4811A /* UIViewExtension.swift in Sources */,
+				11C7CD4E29C4698D00D4811A /* AppCoordinator.swift in Sources */,
+				11C7CD3B29C465B400D4811A /* MainViewController.swift in Sources */,
+				11C7CD5329C46A6100D4811A /* UIViewControllerExtension.swift in Sources */,
 				11C7CD3729C465B400D4811A /* AppDelegate.swift in Sources */,
+				11C7CD5029C469DB00D4811A /* MainViewModel.swift in Sources */,
+				11C7CD5C29C46B6200D4811A /* Storyboards.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,11 +408,13 @@
 		};
 		11C7CD4829C465B600D4811A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CA4A61A8B6FA91CEC000DA3 /* Pods-SeekMaxAssessment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZTL8RARQZ9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SeekMaxAssessment/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -322,11 +438,13 @@
 		};
 		11C7CD4929C465B600D4811A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB36F8C2A56A140B43E6D6EB /* Pods-SeekMaxAssessment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZTL8RARQZ9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SeekMaxAssessment/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -1,0 +1,6 @@
+ ib:
+  inputs:
+    - ../../../SeekMaxAssessment/
+  outputs:
+    - templateName: scenes-swift5
+      output: ../../Generated/Storyboards.swift
