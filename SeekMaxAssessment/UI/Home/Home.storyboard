@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,9 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aOc-sX-1jr">
+                                <rect key="frame" x="0.0" y="47" width="390" height="90"/>
+                                <color key="backgroundColor" name="backgroundBrand"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="oqR-0K-mEt"/>
+                                </constraints>
+                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ETf-Kr-t8D">
-                                <rect key="frame" x="0.0" y="47" width="390" height="714"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="0.0" y="137" width="390" height="624"/>
+                                <color key="backgroundColor" name="backgroundSecondary"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="neC-uo-NXb">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -32,7 +40,10 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ETf-Kr-t8D" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="CTi-36-hQM"/>
+                            <constraint firstItem="ETf-Kr-t8D" firstAttribute="top" secondItem="aOc-sX-1jr" secondAttribute="bottom" id="CTi-36-hQM"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="aOc-sX-1jr" secondAttribute="trailing" id="Jsz-Ua-ZUv"/>
+                            <constraint firstItem="aOc-sX-1jr" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="N1f-ao-Y5x"/>
+                            <constraint firstItem="aOc-sX-1jr" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="YB5-NX-0YU"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ETf-Kr-t8D" secondAttribute="bottom" id="l9Y-Qq-alv"/>
                             <constraint firstItem="ETf-Kr-t8D" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="mtm-KP-TTq"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ETf-Kr-t8D" secondAttribute="trailing" id="raH-az-Ka3"/>
@@ -69,6 +80,12 @@
     </scenes>
     <resources>
         <image name="house.fill" catalog="system" width="128" height="104"/>
+        <namedColor name="backgroundBrand">
+            <color red="0.050980392156862744" green="0.2196078431372549" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="backgroundSecondary">
+            <color red="0.93725490196078431" green="0.95294117647058818" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

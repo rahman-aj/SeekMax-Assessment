@@ -1,4 +1,13 @@
- ib:
+xcassets:
+  inputs:
+    - ../../../SeekMaxAssessment/Resources/Assets.xcassets
+  outputs:
+# Need to use templatePath for Swift Package Manager,
+# as mentioned in https://github.com/SwiftGen/SwiftGen/issues/689#issuecomment-630040692
+    - templateName: swift5
+      output: ../../Generated/Assets.swift
+
+ib:
   inputs:
     - ../../../SeekMaxAssessment/
   outputs:

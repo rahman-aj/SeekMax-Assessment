@@ -1,4 +1,5 @@
 import UIKit
+import Combine
 
 protocol HomeViewControllerDelegate: NSObjectProtocol {
     
@@ -13,6 +14,14 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         configureViews()
+        viewModel.fetchJobs()
+        viewModel.jobsSubject
+            .sink { [weak self] jobs in
+                guard let self = self else { return }
+                
+                self.jobs = jobs
+                self.collectionView.reloadData()
+            }.store(in: &cancellables)
     }
     
     //----------------------------------------
@@ -39,6 +48,14 @@ class HomeViewController: UIViewController {
     weak var delegate: HomeViewControllerDelegate?
     
     //----------------------------------------
+    // MARK: - Internals
+    //----------------------------------------
+    
+    private var cancellables: Set<AnyCancellable> = Set()
+    
+    private var jobs: Jobs?
+    
+    //----------------------------------------
     // MARK: - Outlets
     //----------------------------------------
     
@@ -59,7 +76,15 @@ extension HomeViewController: UICollectionViewDelegate {
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 200)
+        return CGSize(width: collectionView.frame.width, height: 150)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 16, left: 16, bottom: 16, right: -16)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 16
     }
 }
 
@@ -69,11 +94,15 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
 
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return jobs?.size ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: JobCardCollectionViewCell.reuseIdentifier, for: indexPath) as! JobCardCollectionViewCell
+        
+        let viewModel = JobCardCollectionViewCellViewModel(job: jobs?.jobs?[indexPath.item])
+        cell.bindViewModel(viewModel: viewModel)
+        
         return cell
     }
 }

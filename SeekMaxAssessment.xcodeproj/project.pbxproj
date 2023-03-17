@@ -25,11 +25,19 @@
 		11C7CD6729C470D300D4811A /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7CD6629C470D300D4811A /* UICollectionViewExtension.swift */; };
 		11C7CD6A29C4711100D4811A /* JobCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11C7CD6929C4711100D4811A /* JobCardCollectionViewCell.xib */; };
 		11C7CD6C29C4711C00D4811A /* JobCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7CD6B29C4711C00D4811A /* JobCardCollectionViewCell.swift */; };
-		90391755297192624104D8F8 /* Pods_SeekMaxAssessment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0769655BF65227ED0995EEE7 /* Pods_SeekMaxAssessment.framework */; };
+		11C7CD7129C474EC00D4811A /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7CD7029C474EC00D4811A /* Environment.swift */; };
+		11C7CD7329C4751500D4811A /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7CD7229C4751500D4811A /* AppConstants.swift */; };
+		11C7CD8129C47C6D00D4811A /* URLRequestExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7CD8029C47C6D00D4811A /* URLRequestExtension.swift */; };
+		11C7CD8629C4821E00D4811A /* Jobs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7CD8529C4821E00D4811A /* Jobs.swift */; };
+		11C7CD8829C482C600D4811A /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7CD8729C482C600D4811A /* Job.swift */; };
+		11C7CD8A29C4830300D4811A /* SalaryRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7CD8929C4830300D4811A /* SalaryRange.swift */; };
+		11C7CD8C29C48C8E00D4811A /* AlamofireClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7CD8B29C48C8E00D4811A /* AlamofireClient.swift */; };
+		11C7CD8E29C4918400D4811A /* JobCardCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7CD8D29C4918400D4811A /* JobCardCollectionViewCellViewModel.swift */; };
+		11C7CD9029C495C700D4811A /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7CD8F29C495C700D4811A /* Assets.swift */; };
+		DE3682991A17B3ACA28C5D8C /* Pods_SeekMaxAssessment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4685F8C0D9D499CE335EFE24 /* Pods_SeekMaxAssessment.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0769655BF65227ED0995EEE7 /* Pods_SeekMaxAssessment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SeekMaxAssessment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11C7CD3329C465B400D4811A /* SeekMaxAssessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeekMaxAssessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11C7CD3629C465B400D4811A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11C7CD3A29C465B400D4811A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -50,8 +58,19 @@
 		11C7CD6629C470D300D4811A /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
 		11C7CD6929C4711100D4811A /* JobCardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobCardCollectionViewCell.xib; sourceTree = "<group>"; };
 		11C7CD6B29C4711C00D4811A /* JobCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCardCollectionViewCell.swift; sourceTree = "<group>"; };
-		5CA4A61A8B6FA91CEC000DA3 /* Pods-SeekMaxAssessment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeekMaxAssessment.debug.xcconfig"; path = "Target Support Files/Pods-SeekMaxAssessment/Pods-SeekMaxAssessment.debug.xcconfig"; sourceTree = "<group>"; };
-		AB36F8C2A56A140B43E6D6EB /* Pods-SeekMaxAssessment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeekMaxAssessment.release.xcconfig"; path = "Target Support Files/Pods-SeekMaxAssessment/Pods-SeekMaxAssessment.release.xcconfig"; sourceTree = "<group>"; };
+		11C7CD6E29C4740200D4811A /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		11C7CD7029C474EC00D4811A /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		11C7CD7229C4751500D4811A /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		11C7CD8029C47C6D00D4811A /* URLRequestExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestExtension.swift; sourceTree = "<group>"; };
+		11C7CD8529C4821E00D4811A /* Jobs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jobs.swift; sourceTree = "<group>"; };
+		11C7CD8729C482C600D4811A /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		11C7CD8929C4830300D4811A /* SalaryRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalaryRange.swift; sourceTree = "<group>"; };
+		11C7CD8B29C48C8E00D4811A /* AlamofireClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireClient.swift; sourceTree = "<group>"; };
+		11C7CD8D29C4918400D4811A /* JobCardCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCardCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
+		11C7CD8F29C495C700D4811A /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		4685F8C0D9D499CE335EFE24 /* Pods_SeekMaxAssessment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SeekMaxAssessment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7590183AEF5C8210F52973F5 /* Pods-SeekMaxAssessment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeekMaxAssessment.release.xcconfig"; path = "Target Support Files/Pods-SeekMaxAssessment/Pods-SeekMaxAssessment.release.xcconfig"; sourceTree = "<group>"; };
+		C1B18C9A47DE084EEB227C29 /* Pods-SeekMaxAssessment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeekMaxAssessment.debug.xcconfig"; path = "Target Support Files/Pods-SeekMaxAssessment/Pods-SeekMaxAssessment.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90391755297192624104D8F8 /* Pods_SeekMaxAssessment.framework in Frameworks */,
+				DE3682991A17B3ACA28C5D8C /* Pods_SeekMaxAssessment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,7 +91,7 @@
 				11C7CD3529C465B400D4811A /* SeekMaxAssessment */,
 				11C7CD3429C465B400D4811A /* Products */,
 				58ECDF408C1C0FBB0DEF01DE /* Pods */,
-				ACF0C910A262C2ADB55ECC0A /* Frameworks */,
+				99066FCB2E0F40F8000C1B27 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,6 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				11C7CD4A29C465F600D4811A /* UI */,
+				11C7CD7529C47BBE00D4811A /* Services */,
+				11C7CD8229C47CA800D4811A /* Model */,
 				11C7CD5129C46A4D00D4811A /* Utilities */,
 				11C7CD5A29C46B5700D4811A /* Generated */,
 				11C7CD4B29C4660700D4811A /* Resources */,
@@ -112,6 +133,7 @@
 		11C7CD4B29C4660700D4811A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				11C7CD6D29C473E400D4811A /* Target Configuration */,
 				11C7CD4429C465B600D4811A /* Info.plist */,
 				11C7CD3F29C465B600D4811A /* Assets.xcassets */,
 			);
@@ -131,9 +153,12 @@
 		11C7CD5129C46A4D00D4811A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				11C7CD7029C474EC00D4811A /* Environment.swift */,
+				11C7CD7229C4751500D4811A /* AppConstants.swift */,
 				11C7CD5229C46A6100D4811A /* UIViewControllerExtension.swift */,
 				11C7CD5429C46A9500D4811A /* UIViewExtension.swift */,
 				11C7CD6629C470D300D4811A /* UICollectionViewExtension.swift */,
+				11C7CD8029C47C6D00D4811A /* URLRequestExtension.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -158,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				11C7CD5B29C46B6200D4811A /* Storyboards.swift */,
+				11C7CD8F29C495C700D4811A /* Assets.swift */,
 			);
 			path = Generated;
 			sourceTree = "<group>";
@@ -178,23 +204,50 @@
 			children = (
 				11C7CD6929C4711100D4811A /* JobCardCollectionViewCell.xib */,
 				11C7CD6B29C4711C00D4811A /* JobCardCollectionViewCell.swift */,
+				11C7CD8D29C4918400D4811A /* JobCardCollectionViewCellViewModel.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		11C7CD6D29C473E400D4811A /* Target Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				11C7CD6E29C4740200D4811A /* Config.xcconfig */,
+			);
+			path = "Target Configuration";
+			sourceTree = "<group>";
+		};
+		11C7CD7529C47BBE00D4811A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				11C7CD8B29C48C8E00D4811A /* AlamofireClient.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		11C7CD8229C47CA800D4811A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				11C7CD8529C4821E00D4811A /* Jobs.swift */,
+				11C7CD8729C482C600D4811A /* Job.swift */,
+				11C7CD8929C4830300D4811A /* SalaryRange.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		58ECDF408C1C0FBB0DEF01DE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5CA4A61A8B6FA91CEC000DA3 /* Pods-SeekMaxAssessment.debug.xcconfig */,
-				AB36F8C2A56A140B43E6D6EB /* Pods-SeekMaxAssessment.release.xcconfig */,
+				C1B18C9A47DE084EEB227C29 /* Pods-SeekMaxAssessment.debug.xcconfig */,
+				7590183AEF5C8210F52973F5 /* Pods-SeekMaxAssessment.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		ACF0C910A262C2ADB55ECC0A /* Frameworks */ = {
+		99066FCB2E0F40F8000C1B27 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0769655BF65227ED0995EEE7 /* Pods_SeekMaxAssessment.framework */,
+				4685F8C0D9D499CE335EFE24 /* Pods_SeekMaxAssessment.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -206,10 +259,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11C7CD4729C465B600D4811A /* Build configuration list for PBXNativeTarget "SeekMaxAssessment" */;
 			buildPhases = (
-				A5379043142EFC4A4076CB18 /* [CP] Check Pods Manifest.lock */,
+				7ABCA7B9BF58CB09107F8ACB /* [CP] Check Pods Manifest.lock */,
 				11C7CD2F29C465B400D4811A /* Sources */,
 				11C7CD3029C465B400D4811A /* Frameworks */,
 				11C7CD3129C465B400D4811A /* Resources */,
+				CEE871DA6ED75DEE0A0E5563 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -270,7 +324,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A5379043142EFC4A4076CB18 /* [CP] Check Pods Manifest.lock */ = {
+		7ABCA7B9BF58CB09107F8ACB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -292,6 +346,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CEE871DA6ED75DEE0A0E5563 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SeekMaxAssessment/Pods-SeekMaxAssessment-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SeekMaxAssessment/Pods-SeekMaxAssessment-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SeekMaxAssessment/Pods-SeekMaxAssessment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -300,17 +371,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				11C7CD6729C470D300D4811A /* UICollectionViewExtension.swift in Sources */,
+				11C7CD8829C482C600D4811A /* Job.swift in Sources */,
+				11C7CD8129C47C6D00D4811A /* URLRequestExtension.swift in Sources */,
 				11C7CD5529C46A9500D4811A /* UIViewExtension.swift in Sources */,
 				11C7CD6C29C4711C00D4811A /* JobCardCollectionViewCell.swift in Sources */,
+				11C7CD8629C4821E00D4811A /* Jobs.swift in Sources */,
 				11C7CD6329C46D6200D4811A /* HomeViewModel.swift in Sources */,
 				11C7CD4E29C4698D00D4811A /* AppCoordinator.swift in Sources */,
+				11C7CD9029C495C700D4811A /* Assets.swift in Sources */,
 				11C7CD3B29C465B400D4811A /* MainViewController.swift in Sources */,
+				11C7CD7329C4751500D4811A /* AppConstants.swift in Sources */,
 				11C7CD6129C46D4300D4811A /* HomeViewController.swift in Sources */,
 				11C7CD5329C46A6100D4811A /* UIViewControllerExtension.swift in Sources */,
 				11C7CD3729C465B400D4811A /* AppDelegate.swift in Sources */,
 				11C7CD6529C46D7200D4811A /* HomeCoordinator.swift in Sources */,
 				11C7CD5029C469DB00D4811A /* MainViewModel.swift in Sources */,
+				11C7CD8C29C48C8E00D4811A /* AlamofireClient.swift in Sources */,
+				11C7CD8A29C4830300D4811A /* SalaryRange.swift in Sources */,
 				11C7CD5C29C46B6200D4811A /* Storyboards.swift in Sources */,
+				11C7CD7129C474EC00D4811A /* Environment.swift in Sources */,
+				11C7CD8E29C4918400D4811A /* JobCardCollectionViewCellViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,7 +532,7 @@
 		};
 		11C7CD4829C465B600D4811A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5CA4A61A8B6FA91CEC000DA3 /* Pods-SeekMaxAssessment.debug.xcconfig */;
+			baseConfigurationReference = 11C7CD6E29C4740200D4811A /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -466,6 +546,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_PREPROCESS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -482,7 +563,7 @@
 		};
 		11C7CD4929C465B600D4811A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AB36F8C2A56A140B43E6D6EB /* Pods-SeekMaxAssessment.release.xcconfig */;
+			baseConfigurationReference = 11C7CD6E29C4740200D4811A /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -496,6 +577,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_PREPROCESS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

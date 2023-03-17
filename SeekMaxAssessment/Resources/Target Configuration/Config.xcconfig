@@ -1,0 +1,7 @@
+#include "Pods/Target Support Files/Pods-SeekMaxAssessment/Pods-SeekMaxAssessment.release.xcconfig"
+#include "Pods/Target Support Files/Pods-SeekMaxAssessment/Pods-SeekMaxAssessment.debug.xcconfig"
+
+PRODUCT_MODULE_NAME = SeekMaxAssessment
+
+// API Base URL
+API_BASE_URL = localhost:3001/
