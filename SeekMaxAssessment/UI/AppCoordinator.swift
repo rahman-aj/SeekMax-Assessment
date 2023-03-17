@@ -19,7 +19,7 @@ class AppCoordinator: NSObject {
     //----------------------------------------
     
     func start(transitionStyle: TransitionStyle = .push) {
-        startMainFlow()
+        isUserLoggedIn ? startMainFlow() : startAuthFlow()
     }
     
     private func restart() {
@@ -33,6 +33,37 @@ class AppCoordinator: NSObject {
         } else {
             start(transitionStyle: .crossDissolve)
         }
+    }
+    
+    //----------------------------------------
+    // MARK: - Auth Flow
+    //----------------------------------------
+    
+    private func startAuthFlow(transitionStyle: TransitionStyle = .push) {
+     let (navigationController, authViewController) = AuthViewController.fromStoryboard()
+        authViewController.viewModel = AuthViewModel()
+        
+        let authCoordinator = AuthCoordinator(authViewController: authViewController)
+        authCoordinator.delegate = self
+        authCoordinator.start()
+        self.authCoordinator = authCoordinator
+        
+        mainViewController.addChild(navigationController)
+        mainViewController.view.addSubview(navigationController.view)
+        NSLayoutConstraint.activate(navigationController.view.constraints(pinningEdgesTo: mainViewController.view))
+        navigationController.didMove(toParent: mainViewController)
+        
+        activeViewController = authViewController
+        isUserLoggedIn = true
+    }
+
+    private func endAuthFlow() {
+        self.authCoordinator = nil
+        self.activeViewController = nil
+        start()
+        self.mainViewController.children.forEach({
+            $0.dismiss(animated: true)
+        })
     }
     
     //----------------------------------------
@@ -129,6 +160,8 @@ class AppCoordinator: NSObject {
     // MARK: - Internals
     //----------------------------------------
     
+    private lazy var isUserLoggedIn = AlamofireClient.shared.isUserLoggedIn()
+    
     // Managed view controllers
     private let mainViewController: MainViewController
     
@@ -136,6 +169,8 @@ class AppCoordinator: NSObject {
     private var activeViewController: UIViewController?
     
     // Child coordinators
+    private var authCoordinator: AuthCoordinator?
+    
     private var homeCoordinator: HomeCoordinator?
 }
 
@@ -148,11 +183,21 @@ extension AppCoordinator: MainViewControllerDelegate {
 }
 
 //----------------------------------------
-// MARK: - Home View Controller Delegate
+// MARK: - Home Coordinator Delegate
 //----------------------------------------
 
 extension AppCoordinator: HomeCoordinatorDelegate {
     func homeCoordinatorDidSelectContent(_ homeCoordinator: HomeCoordinator, job: Job) {
         showJobDetailsViewController(job: job)
+    }
+}
+
+//----------------------------------------
+// MARK: - Auth Coordinator Delegate
+//----------------------------------------
+
+extension AppCoordinator: AuthCoodinatorDelegate {
+    func authCoordinatorDidFinish(_ coordinator: AuthCoordinator) {
+        endAuthFlow()
     }
 }

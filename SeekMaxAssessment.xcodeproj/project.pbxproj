@@ -38,6 +38,10 @@
 		11C7CD9529C4997800D4811A /* JobDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7CD9429C4997800D4811A /* JobDetailsViewController.swift */; };
 		11C7CD9729C499A500D4811A /* JobDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7CD9629C499A500D4811A /* JobDetailsViewModel.swift */; };
 		11C7CD9929C4A5CB00D4811A /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7CD9829C4A5CB00D4811A /* Company.swift */; };
+		11C7CD9C29C4AFD900D4811A /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11C7CD9B29C4AFD900D4811A /* Auth.storyboard */; };
+		11C7CD9E29C4AFE000D4811A /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7CD9D29C4AFE000D4811A /* AuthViewController.swift */; };
+		11C7CDA029C4AFE700D4811A /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7CD9F29C4AFE700D4811A /* AuthViewModel.swift */; };
+		11C7CDA229C4AFF700D4811A /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7CDA129C4AFF700D4811A /* AuthCoordinator.swift */; };
 		DE3682991A17B3ACA28C5D8C /* Pods_SeekMaxAssessment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4685F8C0D9D499CE335EFE24 /* Pods_SeekMaxAssessment.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +80,10 @@
 		11C7CD9429C4997800D4811A /* JobDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailsViewController.swift; sourceTree = "<group>"; };
 		11C7CD9629C499A500D4811A /* JobDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailsViewModel.swift; sourceTree = "<group>"; };
 		11C7CD9829C4A5CB00D4811A /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		11C7CD9B29C4AFD900D4811A /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		11C7CD9D29C4AFE000D4811A /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		11C7CD9F29C4AFE700D4811A /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		11C7CDA129C4AFF700D4811A /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
 		4685F8C0D9D499CE335EFE24 /* Pods_SeekMaxAssessment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SeekMaxAssessment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7590183AEF5C8210F52973F5 /* Pods-SeekMaxAssessment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeekMaxAssessment.release.xcconfig"; path = "Target Support Files/Pods-SeekMaxAssessment/Pods-SeekMaxAssessment.release.xcconfig"; sourceTree = "<group>"; };
 		C1B18C9A47DE084EEB227C29 /* Pods-SeekMaxAssessment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeekMaxAssessment.debug.xcconfig"; path = "Target Support Files/Pods-SeekMaxAssessment/Pods-SeekMaxAssessment.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +140,7 @@
 				11C7CD4129C465B600D4811A /* LaunchScreen.storyboard */,
 				11C7CD4D29C4698D00D4811A /* AppCoordinator.swift */,
 				11C7CD4C29C4694800D4811A /* Main */,
+				11C7CD9A29C4AFCD00D4811A /* Auth */,
 				11C7CD5D29C46CDF00D4811A /* Home */,
 				11C7CD9129C4995300D4811A /* Job Details */,
 				11C7CD6829C470E100D4811A /* Shared */,
@@ -255,6 +264,17 @@
 			path = "Job Details";
 			sourceTree = "<group>";
 		};
+		11C7CD9A29C4AFCD00D4811A /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				11C7CD9B29C4AFD900D4811A /* Auth.storyboard */,
+				11C7CDA129C4AFF700D4811A /* AuthCoordinator.swift */,
+				11C7CD9D29C4AFE000D4811A /* AuthViewController.swift */,
+				11C7CD9F29C4AFE700D4811A /* AuthViewModel.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		58ECDF408C1C0FBB0DEF01DE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -332,6 +352,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11C7CD9C29C4AFD900D4811A /* Auth.storyboard in Resources */,
 				11C7CD9329C4996E00D4811A /* JobDetails.storyboard in Resources */,
 				11C7CD4329C465B600D4811A /* LaunchScreen.storyboard in Resources */,
 				11C7CD5F29C46CEF00D4811A /* Home.storyboard in Resources */,
@@ -407,13 +428,16 @@
 				11C7CD5329C46A6100D4811A /* UIViewControllerExtension.swift in Sources */,
 				11C7CD3729C465B400D4811A /* AppDelegate.swift in Sources */,
 				11C7CD6529C46D7200D4811A /* HomeCoordinator.swift in Sources */,
+				11C7CDA229C4AFF700D4811A /* AuthCoordinator.swift in Sources */,
 				11C7CD5029C469DB00D4811A /* MainViewModel.swift in Sources */,
+				11C7CD9E29C4AFE000D4811A /* AuthViewController.swift in Sources */,
 				11C7CD8C29C48C8E00D4811A /* AlamofireClient.swift in Sources */,
 				11C7CD8A29C4830300D4811A /* SalaryRange.swift in Sources */,
 				11C7CD5C29C46B6200D4811A /* Storyboards.swift in Sources */,
 				11C7CD9529C4997800D4811A /* JobDetailsViewController.swift in Sources */,
 				11C7CD7129C474EC00D4811A /* Environment.swift in Sources */,
 				11C7CD8E29C4918400D4811A /* JobCardCollectionViewCellViewModel.swift in Sources */,
+				11C7CDA029C4AFE700D4811A /* AuthViewModel.swift in Sources */,
 				11C7CD9929C4A5CB00D4811A /* Company.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
