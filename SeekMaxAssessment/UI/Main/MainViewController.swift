@@ -5,17 +5,6 @@ protocol MainViewControllerDelegate: NSObjectProtocol {
 }
 
 class MainViewController: UIViewController {
-    
-    //----------------------------------------
-    // MARK: - Properties
-    //----------------------------------------
-    
-    static var tabBarHeight: CGFloat = 49
-    
-    static var safeAreaBottomPadding: CGFloat = 0.0
-    
-    static var miniPlayerHeightShowingHeight: CGFloat = 0.0
-    
     //----------------------------------------
     // MARK: - Lifecycle
     //----------------------------------------
@@ -39,10 +28,20 @@ class MainViewController: UIViewController {
     //----------------------------------------
     
     weak var delegate: MainViewControllerDelegate?
+    
+    //----------------------------------------
+    // MARK: - Properties
+    //----------------------------------------
+    
+    static var tabBarHeight: CGFloat = 49
+    
+    static var safeAreaBottomPadding: CGFloat = 0.0
+    
+    static var miniPlayerHeightShowingHeight: CGFloat = 0.0
 }
 
 //----------------------------------------
-// MARK: - UITab Bar Controller Delegate
+// MARK: - UI Tab Bar Controller Delegate
 //----------------------------------------
 
 extension MainViewController: UITabBarControllerDelegate {

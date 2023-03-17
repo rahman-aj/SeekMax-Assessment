@@ -25,6 +25,16 @@
             </objects>
             <point key="canvasLocation" x="1066.1538461538462" y="3.5545023696682461"/>
         </scene>
+        <!--Home-->
+        <scene sceneID="xw1-Jg-SjH">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" id="YpF-y6-D8J" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="X6y-6J-ulB"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qe8-SR-H1G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1282" y="522"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="pnz-U3-ynh">
             <objects>
@@ -34,6 +44,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
+                    <connections>
+                        <segue destination="YpF-y6-D8J" kind="relationship" relationship="viewControllers" id="3Lb-Rr-haU"/>
+                    </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OpF-h9-1Kh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

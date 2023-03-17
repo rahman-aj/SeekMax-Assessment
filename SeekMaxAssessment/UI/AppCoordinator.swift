@@ -1,5 +1,4 @@
 import UIKit
-import Combine
 
 class AppCoordinator: NSObject {
     //----------------------------------------
@@ -41,8 +40,6 @@ class AppCoordinator: NSObject {
     //----------------------------------------
     
     private func startMainFlow(transitionStyle: TransitionStyle = .push) {
-//        ServiceContainer.prepareForUse()
-        
         // Load main tab view controller.
         let mainTabBarController = StoryboardScene.Main.tabBarController.instantiate()
         mainTabBarController.delegate = mainViewController
@@ -60,6 +57,14 @@ class AppCoordinator: NSObject {
         }
         
         activeViewController = mainTabBarController
+        
+        let homeNavigationController = mainTabBarController.viewControllers![0] as! UINavigationController
+        let homeViewController = homeNavigationController.topViewController as! HomeViewController
+        homeViewController.viewModel = HomeViewModel()
+        let homeCoordinator = HomeCoordinator(homeViewController: homeViewController)
+        homeCoordinator.delegate = self
+        self.homeCoordinator = homeCoordinator
+        homeCoordinator.start()
     }
     
     //----------------------------------------
@@ -114,13 +119,14 @@ class AppCoordinator: NSObject {
     // MARK: - Internals
     //----------------------------------------
     
-    private var cancellables = Set<AnyCancellable>()
-    
     // Managed view controllers
     private let mainViewController: MainViewController
     
     // View controllers that are hosted in the main view controller
     private var activeViewController: UIViewController?
+    
+    // Child coordinators
+    private var homeCoordinator: HomeCoordinator?
 }
 
 //----------------------------------------
@@ -129,4 +135,12 @@ class AppCoordinator: NSObject {
 
 extension AppCoordinator: MainViewControllerDelegate {
     
+}
+
+//----------------------------------------
+// MARK: - Home View Controller Delegate
+//----------------------------------------
+
+extension AppCoordinator: HomeCoordinatorDelegate {
+   
 }
