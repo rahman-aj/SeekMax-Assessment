@@ -19,6 +19,13 @@ internal enum StoryboardScene {
 
     internal static let homeViewController = SceneType<HomeViewController>(storyboard: Self.self, identifier: "HomeViewController")
   }
+  internal enum JobDetails: StoryboardType {
+    internal static let storyboardName = "JobDetails"
+
+    internal static let initialScene = InitialSceneType<UIKit.UINavigationController>(storyboard: Self.self)
+
+    internal static let jobDetailsViewController = SceneType<JobDetailsViewController>(storyboard: Self.self, identifier: "JobDetailsViewController")
+  }
   internal enum LaunchScreen: StoryboardType {
     internal static let storyboardName = "LaunchScreen"
 

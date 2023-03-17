@@ -116,6 +116,16 @@ class AppCoordinator: NSObject {
     }
     
     //----------------------------------------
+    // MARK: - Actions
+    //----------------------------------------
+    
+    func showJobDetailsViewController(job: Job) {
+        let viewController = JobDetailsViewController.fromStoryboard()
+        viewController.viewModel = JobDetailsViewModel(job: job)
+        pushViewController(viewController: viewController, navigationStyle: .push)
+    }
+    
+    //----------------------------------------
     // MARK: - Internals
     //----------------------------------------
     
@@ -142,5 +152,7 @@ extension AppCoordinator: MainViewControllerDelegate {
 //----------------------------------------
 
 extension AppCoordinator: HomeCoordinatorDelegate {
-   
+    func homeCoordinatorDidSelectContent(_ homeCoordinator: HomeCoordinator, job: Job) {
+        showJobDetailsViewController(job: job)
+    }
 }

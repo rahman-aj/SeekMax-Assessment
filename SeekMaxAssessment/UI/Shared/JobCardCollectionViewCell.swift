@@ -2,6 +2,10 @@ import UIKit
 
 class JobCardCollectionViewCell: UICollectionViewCell, NibReusable {
     
+    //----------------------------------------
+    // MARK: - Bind View Model
+    //----------------------------------------
+    
     func bindViewModel(viewModel: JobCardCollectionViewCellViewModel) {
         self.viewModel = viewModel
         
@@ -10,7 +14,15 @@ class JobCardCollectionViewCell: UICollectionViewCell, NibReusable {
         jobDescriptionLabel.text = viewModel.jobDescription
     }
     
+    //----------------------------------------
+    // MARK: - View Model
+    //----------------------------------------
+    
     var viewModel: JobCardCollectionViewCellViewModel?
+    
+    //----------------------------------------
+    // MARK: - Outlets
+    //----------------------------------------
     
     @IBOutlet private weak var jobTitleLabel: UILabel!
     

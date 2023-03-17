@@ -1,15 +1,11 @@
 import Foundation
 import UIKit
 
-struct Job: Hashable, Codable {
+struct Company: Hashable, Codable {
     let id: String?
-    let positionTitle: String?
-    let description: String?
-    let company: Company?
-    let salaryRange: SalaryRange?
-    let location: Int?
-    let industry: Int?
-    let haveIApplied: Bool?
+    let name: String?
+    let createdAt: String?
+    let updatedAt: String?
     
     //----------------------------------------
     // MARK: - Codable protocols
@@ -17,13 +13,9 @@ struct Job: Hashable, Codable {
     
     enum CodingKeys: String, CodingKey {
         case id = "_id"
-        case positionTitle
-        case description
-        case company
-        case salaryRange
-        case location
-        case industry
-        case haveIApplied
+        case name
+        case createdAt
+        case updatedAt
     }
     
     //----------------------------------------
@@ -34,7 +26,7 @@ struct Job: Hashable, Codable {
         hasher.combine(id)
     }
     
-    static func == (lhs: Job, rhs: Job) -> Bool {
+    static func == (lhs: Company, rhs: Company) -> Bool {
         return lhs.id == rhs.id
     }
 }

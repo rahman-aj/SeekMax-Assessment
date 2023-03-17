@@ -2,7 +2,7 @@ import UIKit
 import Combine
 
 protocol HomeViewControllerDelegate: NSObjectProtocol {
-    
+    func homeViewControllerDidSelectContent(_ viewController: HomeViewController, job: Job)
 }
 
 class HomeViewController: UIViewController {
@@ -67,7 +67,10 @@ class HomeViewController: UIViewController {
 //----------------------------------------
 
 extension HomeViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let job = jobs?.jobs?[indexPath.item] else { return }
+        delegate?.homeViewControllerDidSelectContent(self, job: job)
+    }
 }
 
 //--------------------------------------------------

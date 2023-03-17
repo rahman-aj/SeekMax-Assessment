@@ -1,7 +1,7 @@
 import Foundation
 
 protocol HomeCoordinatorDelegate: NSObjectProtocol {
-    
+    func homeCoordinatorDidSelectContent(_ homeCoordinator: HomeCoordinator, job: Job)
 }
 
 class HomeCoordinator: NSObject {
@@ -40,5 +40,7 @@ class HomeCoordinator: NSObject {
 //----------------------------------------
 
 extension HomeCoordinator: HomeViewControllerDelegate {
-  
+    func homeViewControllerDidSelectContent(_ viewController: HomeViewController, job: Job) {
+        delegate?.homeCoordinatorDidSelectContent(self, job: job)
+    }
 }

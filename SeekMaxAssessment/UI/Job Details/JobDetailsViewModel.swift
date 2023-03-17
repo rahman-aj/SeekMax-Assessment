@@ -1,11 +1,11 @@
 import Foundation
 
-class JobCardCollectionViewCellViewModel {
+class JobDetailsViewModel {
     //----------------------------------------
     // MARK: - Initialization
     //----------------------------------------
     
-    init(job: Job?) {
+    init(job: Job) {
         self.job = job
     }
     
@@ -14,24 +14,32 @@ class JobCardCollectionViewCellViewModel {
     //----------------------------------------
     
     var jobTitle: String? {
-        return job?.positionTitle
+        return job.positionTitle
     }
     
     var companyName: String? {
-        return job?.company?.name
+        return job.company?.name
     }
     
     var jobDescription: String? {
-        return job?.description
+        return job.description
     }
     
-    var hasApplied: Bool? {
-        return job?.haveIApplied
+    var maxSalaryRange: Int {
+        return job.salaryRange?.max ?? 0
+    }
+    
+    var minSalaryRange: Int {
+        return job.salaryRange?.min ?? 0
+    }
+    
+    var hasApplied: Bool {
+        return job.haveIApplied ?? false
     }
     
     //----------------------------------------
     // MARK: - Internals
     //----------------------------------------
     
-    private(set) var job: Job?
+    private(set) var job: Job!
 }
